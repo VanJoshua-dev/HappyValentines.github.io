@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      margin-top: 200px;
+      height: 30vh;
+      background-color: #f7f7f7;
+      
+    }
+
+    #heart-container {
+      position: relative;
+      animation: bounceHeart 2s infinite;
+    }
+
+    #heart {
+      position: relative;
+      width: 100px;
+      height: 90px;
+      background-color: #ff4d4d;
+      transform: rotate(-45deg);
+    }
+
+    #heart::before,
+    #heart::after {
+      content: '';
+      position: absolute;
+      width: 90px;
+      height: 90px;
+      background-color: #ff4d4d;
+      border-radius: 50%;
+    }
+
+    #heart::before {
+      top: -50px;
+      left: 0;
+    }
+
+    #heart::after {
+      top: 0;
+      left: 50px;
+    }
+
+    @keyframes bounceHeart {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-20px);
+      }
+    }
+
+    #greeting {
+      margin-left: 25px;
+      font-family: 'Arial', sans-serif;
+      font-size: 24px;
+      color: #ff4d4d;
+      text-align: center;
+      letter-spacing: 2px;
+      position: sticky;
+    }
+  </style>
+</head>
+<body>
+  <div id="heart-container">
+    <div class="small-heart left"></div>
+    <div id="heart"></div>
+    <div class="small-heart right"></div>
+  </div>
+  <div id="greeting">Wishing you a <span style="font-weight: bold;">Lovely</span> Valentine's Day!</div>
+
+  <script>
+  </script>
+</body>
+</html>
